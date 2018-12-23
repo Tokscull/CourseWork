@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1300.0" style="-fx-background-color: rgb(47,47,47);" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.сontroller.StaffFormController">
+    <children>
+        <Button fx:id="productsButton" layoutX="8.0" layoutY="86.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="206.0" style="-fx-background-color: transparent;" text="Товары" textFill="GREY">
+            <font>
+                <Font name="Lobster" size="25.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <AnchorPane layoutX="214.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1086.0" style="-fx-background-color: rgb(240,240,240);">
+            <children>
+                <TableView fx:id="staffsTableView" layoutY="226.0" prefHeight="424.0" prefWidth="1086.0" style="-fx-background-color: rgb(240,240,240); -fx-border-color: rgb(47,47,47); -fx-border-width: 2;" tableMenuButtonVisible="true">
+                    <columns>
+                        <TableColumn fx:id="idStaff" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="surnameStaff" prefWidth="75.0" text="Фамилия" />
+                        <TableColumn fx:id="nameStaff" prefWidth="75.0" text="Имя" />
+                        <TableColumn fx:id="positionStaff" prefWidth="75.0" text="Должность" />
+                        <TableColumn fx:id="birthDayStaff" prefWidth="75.0" text="Дата рождения" />
+                        <TableColumn fx:id="employmentDayStaff" prefWidth="75.0" text="Дата найма" />
+                        <TableColumn fx:id="numberStaff" prefWidth="75.0" text="Телефон" />
+                        <TableColumn fx:id="noteStaff" prefWidth="75.0" text="Заметки" />
+                  <TableColumn fx:id="usernameStaff" prefWidth="75.0" text="Логин" />
+                  <TableColumn fx:id="passwordStaff" prefWidth="75.0" text="Пароль" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <TextField fx:id="numberStaffTextField" layoutX="374.0" layoutY="108.0" prefHeight="30.0" prefWidth="338.0" promptText="Телефон" style="-fx-background-color: rgb(240,240,240); -fx-border-color: rgb(47,47,47); -fx-border-radius: 5; -fx-text-fill: rgb(47,47,47); -fx-prompt-text-fill: rgb(47,47,47);">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="surnameStaffTextField" layoutX="14.0" layoutY="21.0" prefHeight="30.0" prefWidth="338.0" promptText="Фамилия" style="-fx-background-color: rgb(240,240,240); -fx-border-color: rgb(47,47,47); -fx-border-radius: 5; -fx-text-fill: rgb(47,47,47); -fx-prompt-text-fill: rgb(47,47,47);">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextArea fx:id="noteStaffTextField" layoutX="731.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="338.0" promptText="Заметки" style="-fx-control-inner-background: rgb(240,240,240); -fx-border-color: rgb(47,47,47); -fx-border-radius: 5; -fx-text-fill: rgb(47,47,47); -fx-prompt-text-fill: rgb(47,47,47);" wrapText="true">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextArea>
+                <Button fx:id="addButton" layoutX="14.0" layoutY="160.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="198.0" style="-fx-background-color: rgb(47,47,47); -fx-border-radius: 5;" text="Добавить" textFill="WHITE">
+                    <font>
+                        <Font name="Lobster" size="22.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="updateButton" layoutX="301.0" layoutY="160.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="198.0" style="-fx-background-color: rgb(47,47,47); -fx-border-radius: 5;" text="Редактировать" textFill="WHITE">
+                    <font>
+                        <Font name="Lobster" size="22.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="deleteButton" layoutX="584.0" layoutY="160.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="198.0" style="-fx-background-color: rgb(47,47,47); -fx-border-radius: 5;" text="Удалить" textFill="WHITE">
+                    <font>
+                        <Font name="Lobster" size="22.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="refreshButton" layoutX="872.0" layoutY="160.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="198.0" style="-fx-background-color: rgb(47,47,47); -fx-border-radius: 5;" text="Обновить" textFill="WHITE">
+                    <font>
+                        <Font name="Lobster" size="22.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <TextField fx:id="nameStaffTextField" layoutX="14.0" layoutY="65.0" prefHeight="30.0" prefWidth="338.0" promptText="Имя" style="-fx-background-color: rgb(240,240,240); -fx-border-color: rgb(47,47,47); -fx-border-radius: 5; -fx-text-fill: rgb(47,47,47); -fx-prompt-text-fill: rgb(47,47,47);">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+            <DatePicker fx:id="birthDayStaffDatePicker" layoutX="374.0" layoutY="21.0" prefHeight="32.0" prefWidth="338.0" promptText="Дата рождения" style="-fx-border-color: rgb(47,47,47); -fx-border-radius: 5; -fx-text-fill: rgb(47,47,47); -fx-control-inner-background: rgb(240,240,240);" />
+                <TextField fx:id="positionStaffTextField" layoutX="14.0" layoutY="108.0" prefHeight="30.0" prefWidth="338.0" promptText="Должность" style="-fx-background-color: rgb(240,240,240); -fx-border-color: rgb(47,47,47); -fx-border-radius: 5; -fx-text-fill: rgb(47,47,47); -fx-prompt-text-fill: rgb(47,47,47);">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+            <DatePicker fx:id="employmentDayStaffDatePicker" layoutX="374.0" layoutY="65.0" prefHeight="32.0" prefWidth="338.0" promptText="Дата найма" style="-fx-border-color: rgb(47,47,47); -fx-border-radius: 5; -fx-text-fill: rgb(47,47,47); -fx-control-inner-background: rgb(240,240,240);" />
+            <TextField fx:id="usernameStaffTextField" layoutX="731.0" layoutY="108.0" prefHeight="32.0" prefWidth="160.0" promptText="Логин" style="-fx-background-color: rgb(240,240,240); -fx-border-color: rgb(47,47,47); -fx-border-radius: 5; -fx-text-fill: rgb(47,47,47); -fx-prompt-text-fill: rgb(47,47,47);">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="passwordStaffTextField" layoutX="909.0" layoutY="108.0" prefHeight="32.0" prefWidth="160.0" promptText="Пароль" style="-fx-background-color: rgb(240,240,240); -fx-border-color: rgb(47,47,47); -fx-border-radius: 5; -fx-text-fill: rgb(47,47,47); -fx-prompt-text-fill: rgb(47,47,47);">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            </children></AnchorPane>
+        <Label layoutX="39.0" layoutY="10.0" text="EsoFun" textFill="WHITE">
+            <font>
+                <Font name="Lobster" size="29.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resource/products.png" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutY="86.0" prefHeight="58.0" prefWidth="5.0" style="-fx-background-color: rgb(47,47,47);" />
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resource/order.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="ordersButton" layoutX="8.0" layoutY="144.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="206.0" style="-fx-background-color: transparent;" text="Заказы" textFill="GREY">
+            <font>
+                <Font name="Lobster" size="25.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button fx:id="providerButton" layoutX="8.0" layoutY="202.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="222.0" style="-fx-background-color: transparent;" text="     Поставщики" textFill="GREY">
+            <font>
+                <Font name="Lobster" size="25.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resource/provider.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="staffButton" layoutX="8.0" layoutY="260.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="206.0" style="-fx-background-color: transparent;" text="  Персонал" textFill="GREY">
+            <font>
+                <Font name="Lobster" size="25.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resource/staff.png" />
+            </image>
+        </ImageView>
+      <AnchorPane layoutY="260.0" prefHeight="58.0" prefWidth="6.0" style="-fx-background-color: #0000CD;" />
+      <Button fx:id="clientButton" layoutX="8.0" layoutY="318.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="206.0" style="-fx-background-color: transparent;" text="  Клиенты" textFill="GREY">
+         <font>
+            <Font name="Lobster" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/user.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backupFormButton" layoutX="8.0" layoutY="566.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="206.0" style="-fx-background-color: transparent;" text="    Резервное&#10;    копирование" textFill="GREY">
+         <font>
+            <Font name="Lobster" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/backup.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
